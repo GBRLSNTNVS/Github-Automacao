@@ -16,4 +16,4 @@ class LogoutPage {
     }
 }
 
-export default LogoutPage;
+module.exports = LogoutPage;

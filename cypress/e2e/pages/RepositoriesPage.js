@@ -47,4 +47,4 @@ class RepositoriesPage {
     }
 }
 
-export default RepositoriesPage;
+module.exports = RepositoriesPage;

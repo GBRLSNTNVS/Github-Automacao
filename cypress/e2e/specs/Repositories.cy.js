@@ -1,5 +1,5 @@
-import LoginPage from "../pages/LoginPage";
-import RepositoriesPage from "../pages/RepositoriesPage";
+const LoginPage = require("../pages/LoginPage");
+const RepositoriesPage = require("../pages/RepositoriesPage");
 
 describe('GitHub Repositories', () => {
     const loginPage = new LoginPage();

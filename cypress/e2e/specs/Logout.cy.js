@@ -1,5 +1,5 @@
-import LogoutPage from "../pages/LogoutPage";
-import LoginPage from "../pages/LoginPage";
+const LogoutPage = require("../pages/LogoutPage");
+const LoginPage = require("../pages/LoginPage");
 
 describe('GitHub Logout', () => {
     const loginPage = new LoginPage();
