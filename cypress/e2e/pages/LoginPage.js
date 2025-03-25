@@ -28,6 +28,6 @@ class LoginPage {
         this.elements.profileMenuItem().click();
         this.elements.profileUsername().should('contain', expectedUsername);
     }
-} 
+}
 
 export default LoginPage;

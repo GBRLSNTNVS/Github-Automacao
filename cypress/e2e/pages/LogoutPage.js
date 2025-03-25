@@ -11,6 +11,8 @@ class LogoutPage {
         this.elements.profileAvatar().should('be.visible').click();
         this.elements.signOutButton().contains("Sign out").click();
         this.elements.confirmSignOutButton().click();
+        cy.url().should('eq', 'https://github.com/');
+        cy.contains('Sign in').should('be.visible');
     }
 }
 

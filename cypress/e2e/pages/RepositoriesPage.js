@@ -5,7 +5,7 @@ class RepositoriesPage {
         profileAvatar: () => cy.get("span.Button-label img.avatar"),
         repositoryAccessMenu: () => cy.contains("span.prc-ActionList-ItemLabel-TmBhn", "Your repositories"),
         repositoryAccessTab: () => cy.get("span[data-view-component='true']"),
-        repositoryLink: (repoName) => cy.get('a[itemprop="name codeRepository"]').contains(repoName),
+        repositoryLink: (repositoryName) => cy.get('a[itemprop="name codeRepository"]').contains(repositoryName),
         pullRequestsTab: () => cy.get('span[data-content="Pull requests"]'),
         createRepositoryButton: () => cy.xpath("//a[@href='/new' and contains(@class, 'btn-primary') and not(contains(@class, 'd-md-none'))]"),
         repositoryNameInput: () => cy.xpath("//input[@type='text' and contains(@aria-describedby, 'RepoNameInput')]"),
@@ -21,18 +21,29 @@ class RepositoriesPage {
         this.elements.repositoryAccessTab().contains("Repositories").should('be.visible').click();
     }
 
-    navigateToRepository(repoName) {
-        this.elements.repositoryLink(repoName).should('be.visible').click();
+    navigateToRepository(repositoryName) {
+        this.elements.repositoryLink(repositoryName).should('be.visible').click();
     }
 
     navigateToPullRequests() {
         this.elements.pullRequestsTab().should('be.visible').click();
     }
 
-    createRepository(repoName) {
+    createRepository(repositoryName) {
         this.elements.createRepositoryButton().should('be.visible').click();
-        this.elements.repositoryNameInput().should('be.visible').type(repoName);
+        this.elements.repositoryNameInput().should('be.visible').type(repositoryName);
+        cy.wait(1000);
         this.elements.createRepositoryConfirmButton().should('be.visible').click();
+    }
+
+    takeScreenshot(repositoryName) {
+        cy.url().should('include', `/${repositoryName}`).then((currentUrl) => {
+            const screenshotPath = `img/${repositoryName}.png`
+            cy.task('takeScreenshot', {
+                url: currentUrl,
+                path: screenshotPath
+            });
+        });
     }
 }
 

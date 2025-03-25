@@ -27,8 +27,9 @@ describe('GitHub Repositories', () => {
         repositoriesPage.navigateToPullRequests();
     });
 
-    it('should create a new repository', () => {
+    it('should create a new repository and take screenshot', () => {
         repositoriesPage.accessRepositoriesFromMenu();
         repositoriesPage.createRepository(newRepositoryName);
+        repositoriesPage.takeScreenshot(newRepositoryName);
     });
 });
