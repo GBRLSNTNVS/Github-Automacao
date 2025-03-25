@@ -12,7 +12,7 @@ npm ou yarn
 
 [Como clonar repositório](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-git clone https://github.com/GBRLSNTNVS/Github-Automacao.git
+`git clone https://github.com/GBRLSNTNVS/Github-Automacao.git`
 
 **Execute o seguinte comando para instalar as dependências:**
 
