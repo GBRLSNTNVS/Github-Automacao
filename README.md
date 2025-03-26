@@ -20,15 +20,15 @@ npm ou yarn
 
 **Isso instalará automaticamente todas as dependências listadas no package.json, incluindo:**
 
-- Cypress (v14.2.0)
+- [Cypress](https://docs.cypress.io/app/get-started/install-cypress) (v14.2.0)
 
-- cypress-xpath (v2.0.1)
+- [cypress-xpath](https://www.cypress.io/blog/understanding-selectors-in-testing) (v2.0.1)
 
-- dotenv (v16.4.7)
+- [dotenv](https://www.npmjs.com/package/dotenv) (v16.4.7)
 
-- Jest (v29.7.0)
+- [Jest](https://jestjs.io/pt-BR/docs/getting-started) (v29.7.0)
 
-- Puppeteer (v24.4.0)
+- [Puppeteer](https://pptr.dev/guides/installation) (v24.4.0)
 
 ## Comandos disponíveis
 - npm test: Executa os testes com Jest
