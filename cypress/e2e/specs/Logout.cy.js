@@ -1,7 +1,7 @@
 const LogoutPage = require("../pages/LogoutPage");
 const LoginPage = require("../pages/LoginPage");
 
-describe('GitHub Logout', () => {
+describe("GitHub Logout", () => {
     const loginPage = new LoginPage();
     const logoutPage = new LogoutPage();
     const username = Cypress.env('GITHUB_USERNAME');
@@ -12,7 +12,7 @@ describe('GitHub Logout', () => {
         loginPage.enterCredentials(username, password);
     });
 
-    it('should logout the user', () => {
+    it("should logout the user", () => {
         logoutPage.logout();
     });
 });
